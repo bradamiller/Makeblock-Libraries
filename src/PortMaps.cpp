@@ -21,7 +21,8 @@ MePort_Sig mePort[17] = {
     {NC, NC},
     {NC, NC},
 };
-s Encoder_port_type encoder_Port[6] = {
+
+Encoder_port_type encoder_Port[6] = {
     {NC, NC, NC, NC, NC},
     // ENA A   ENA B   PWMA    DIR A2  DIR A1
     {19, 42, 11, 49, 48},
