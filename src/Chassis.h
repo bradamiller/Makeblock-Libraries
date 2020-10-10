@@ -34,10 +34,8 @@ class Chassis {
    * Stop the motors
    */
   void stop();
-}
 
-private : static void
-          isrLeft();
-static void isrRight();
-}
-;
+ private:
+  static void isrLeft();
+  static void isrRight();
+};
