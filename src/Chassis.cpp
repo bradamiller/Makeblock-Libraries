@@ -22,8 +22,8 @@ void Chassis::isrRight() {
 }
 
 void Chassis::setup() {
-    left.reset(SLOT2);
-    right.reset(SLOT1);
+  left.reset(SLOT2);
+  right.reset(SLOT1);
   // Set Pwm 8KHz
   TCCR1A = _BV(WGM10);
   TCCR1B = _BV(CS11) | _BV(WGM12);
@@ -42,19 +42,17 @@ void Chassis::setup() {
 }
 
 void Chassis::setEffort(float leftEffort, float rightEffort) {
-    left.setMotorPwm(leftEffort);
-    right.setMotorPwm(-rightEffort);
+  left.setMotorPwm(leftEffort);
+  right.setMotorPwm(-rightEffort);
 }
+
+void Chassis::stop() { setEffort(0, 0); }
 
 void Chassis::loop() {
-    left.loop();
-    right.loop();
+  left.loop();
+  right.loop();
 }
 
-long Chassis::getLeftPos() {
-    return left.getCurPos();
-}
+long Chassis::getLeftPos() { return left.getCurPos(); }
 
-long Chassis::getRightPos() {
-    return right.getCurPos();
-}
+long Chassis::getRightPos() { return right.getCurPos(); }

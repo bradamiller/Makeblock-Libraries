@@ -30,7 +30,14 @@ class Chassis {
   long getLeftPos();
   long getRightPos();
 
- private:
-  static void isrLeft();
-  static void isrRight();
-};
+  /**
+   * Stop the motors
+   */
+  void stop();
+}
+
+private : static void
+          isrLeft();
+static void isrRight();
+}
+;
