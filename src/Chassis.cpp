@@ -53,6 +53,6 @@ void Chassis::loop() {
   right.loop();
 }
 
-long Chassis::getLeftPos() { return -left.getCurPos(); }
+long Chassis::getLeftPos() { return left.getCurPos(); }
 
-long Chassis::getRightPos() { return right.getCurPos(); }
+long Chassis::getRightPos() { return -right.getCurPos(); }
