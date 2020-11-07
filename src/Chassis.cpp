@@ -46,11 +46,6 @@ void Chassis::setEffort(float leftEffort, float rightEffort) {
   right.setMotorPwm(-rightEffort);
 }
 
-void Chassis::setSpeed(float leftRPM, rightRPM) {
-  left.setCurrentSpeed(leftRPM);
-  right.setCurrentSpeed(rightRPM);
-}
-
 void Chassis::stop() { setEffort(0, 0); }
 
 void Chassis::loop() {
