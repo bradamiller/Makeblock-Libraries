@@ -48,7 +48,7 @@ void Chassis::setEffort(float leftEffort, float rightEffort) {
 
 void Chassis::setSpeed(float leftRPM, float rightRPM) {
   left.runSpeed(leftRPM);
-  right.runSpeed(rightRPM);
+  right.runSpeed(-rightRPM);
 }
 
 void Chassis::stop() { setEffort(0, 0); }
