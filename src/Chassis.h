@@ -11,11 +11,6 @@ class Chassis {
   void setEffort(float leftEffort, float rightEffort);
 
   /**
-   * Set the speed value for the left and right motors in RPM
-   */
-  void setSpeed(float leftRPM, float rightRPM);
-
-  /**
    * This method sets up the registers so the chassis motors will operate
    * and needs to be called from the main program setup() function.
    */
